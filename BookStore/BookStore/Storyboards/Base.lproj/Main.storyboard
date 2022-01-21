@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Sjk-cL-qVi">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bookCell" id="Sjk-cL-qVi" customClass="LibraryCellTableViewCell" customModule="BookStore" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="53.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sjk-cL-qVi" id="dBy-tl-8yR">
@@ -62,7 +62,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="xFO-zV-RAB" kind="show" id="JU5-Lg-1kF"/>
+                                    <outlet property="bookAuthorLabel" destination="P7y-kh-7CI" id="UUw-0c-PP5"/>
+                                    <outlet property="bookRatingLabel" destination="8Fx-AQ-mKO" id="KqD-5x-7KS"/>
+                                    <outlet property="bookTitleLabel" destination="Fga-PB-fDq" id="eAV-co-SlD"/>
+                                    <segue destination="xFO-zV-RAB" kind="show" identifier="toDetailVC" id="JU5-Lg-1kF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -209,7 +212,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="iYb-Kv-yAB"/>
+        <segue reference="JU5-Lg-1kF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book" catalog="system" width="128" height="99"/>

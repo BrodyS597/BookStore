@@ -34,6 +34,7 @@ class BookDetailViewController: UIViewController {
 
     /*
     // MARK: - Navigation
+     //segue toDetailVC
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -41,5 +42,7 @@ class BookDetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    
 
 }
