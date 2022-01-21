@@ -15,6 +15,8 @@
 		6DBAB96E279A14920094A9AD /* LibraryCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBAB96D279A14920094A9AD /* LibraryCellTableViewCell.swift */; };
 		6DBAB970279A14D40094A9AD /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBAB96F279A14D40094A9AD /* LibraryTableViewController.swift */; };
 		6DBAB972279A154A0094A9AD /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBAB971279A154A0094A9AD /* BookDetailViewController.swift */; };
+		6DBAB974279A2DEE0094A9AD /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBAB973279A2DEE0094A9AD /* Book.swift */; };
+		6DBAB976279A2FEE0094A9AD /* BookController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBAB975279A2FEE0094A9AD /* BookController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		6DBAB96D279A14920094A9AD /* LibraryCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCellTableViewCell.swift; sourceTree = "<group>"; };
 		6DBAB96F279A14D40094A9AD /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		6DBAB971279A154A0094A9AD /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
+		6DBAB973279A2DEE0094A9AD /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
+		6DBAB975279A2FEE0094A9AD /* BookController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +51,7 @@
 				416F0D422798D781002D4080 /* Custom Views */,
 				6DBAB96F279A14D40094A9AD /* LibraryTableViewController.swift */,
 				6DBAB971279A154A0094A9AD /* BookDetailViewController.swift */,
+				6DBAB975279A2FEE0094A9AD /* BookController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 		419B17A92798D65100423A18 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6DBAB973279A2DEE0094A9AD /* Book.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,9 +200,11 @@
 			files = (
 				419B178027987EBC00423A18 /* AppDelegate.swift in Sources */,
 				419B178227987EBC00423A18 /* SceneDelegate.swift in Sources */,
+				6DBAB974279A2DEE0094A9AD /* Book.swift in Sources */,
 				6DBAB970279A14D40094A9AD /* LibraryTableViewController.swift in Sources */,
 				6DBAB96E279A14920094A9AD /* LibraryCellTableViewCell.swift in Sources */,
 				6DBAB972279A154A0094A9AD /* BookDetailViewController.swift in Sources */,
+				6DBAB976279A2FEE0094A9AD /* BookController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
