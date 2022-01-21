@@ -9,40 +9,57 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
     
-    //Outlets
+    // MARK: - Outlets
     @IBOutlet weak var enterTitleTextField: UITextField!
     @IBOutlet weak var enterAuthorTextField: UITextField!
     @IBOutlet weak var enterDescriptionTextField: UITextView!
     @IBOutlet weak var enterRatingTextField: UITextField!
     
+    // MARK: - Properties
     
+    var theOptionalBookPropertyOnMyDetailVC: Book?
     
-    
+    // MARK: -LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateViews(book: theOptionalBookPropertyOnMyDetailVC)
     }
     
-    //Actions
+    // MARK: - Actions
     @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let title = enterTitleTextField.text,
+              let author = enterAuthorTextField.text,
+              let description = enterDescriptionTextField.text,
+              let rating = enterRatingTextField.text,
+              let doubleRating = Double(rating) else {return}
+        if let theOptionalBookPropertyOnMyDetailVC = theOptionalBookPropertyOnMyDetailVC {
+            BookController.sharedInstance.updateBook(bookToUpdate: theOptionalBookPropertyOnMyDetailVC, updatedAuthor: author, updatedTitle: title, updatedRating: doubleRating, updatedSynopsis: description)
+        } else {
+            BookController.sharedInstance.createBook(author: author, title: title, rating: doubleRating, synopsis: description)
+        }
+        navigationController?.popViewController(animated: true)
     }
-    
-    @IBAction func clearButtonPressed(_ sender: Any) {
-    }
-    
 
-    
 
-    /*
-    // MARK: - Navigation
-     //segue toDetailVC
+@IBAction func clearButtonPressed(_ sender: Any) {
+    resetView()
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
+// MARK: - Helper Functions
 
+func updateViews(book: Book?) {
+    guard let book = book else {return}
+    enterRatingTextField.text = String(book.rating)
+    enterAuthorTextField.text = book.author
+    enterDescriptionTextField.text = book.synopsis
+    enterTitleTextField.text = book.title
+    
+}
+func resetView() {
+    enterTitleTextField.text = ""
+    enterAuthorTextField.text = ""
+    enterRatingTextField.text = ""
+    enterDescriptionTextField.text = ""
+    
+}
 }
